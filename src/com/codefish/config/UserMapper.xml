@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codefish.dao.UserDao">
+    <select id="selectAll" resultType="com.codefish.domain.User">
+        select * from user
+    </select>
+
+    <insert id="userAdd" parameterType="com.codefish.domain.User">
+        insert into user values(#{userName}, #{age}, #{passWord})
+    </insert>
+</mapper>
